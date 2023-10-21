@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Flight</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="Booking.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <form action="connect.php" method="post">
+    <div id="booking" class="section">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="booking-form">
+                        <form>
+                            
+                            <div class="row">
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <span class="form-label">First Name</span>
+                                                    <input class="form-control" type="text" placeholder="First Name" id="firstName" name="firstName" onblur="validation();" required>
+                                                    <span id="first-name-span" style="color:red;"></span>
+                                                </div>
+                                                </div>
+        
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Last Name</span>
+                                                        <input class="form-control" type="text" placeholder="Last Name" id ="lastName" name="lastName" onblur="validation();" required>
+                                                        <span id="last-name-span" style="color:red;"></span>
+                                                    </div>
+                                                    </div>
+
+
+                                               
+                                                    
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <span class="form-label">GENDER</span>
+                                                        <select class="form-control" type="text" name="gender" placeholder="SELECT GENDER" required>
+                                                           
+                                                            <option value="male">MALE</option>
+                                                            <option value="female">FEMALE</option>
+                                                            <option value="other">OTHER</option>
+                                                            
+                                                            
+                                                            
+                                                            </select>
+                                                            <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                        
+
+
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Metro from</span>
+                                        <select class="form-control" type="text" name="sourceStation" placeholder="Metro Station" required>
+                                            <option>select</option>
+                                            <option value="Dilshad Garden">Dilshad Garden</option>
+											
+                                            <option value="Kashmere Gate">Kashmere Gate</option>
+											<option value="Shastri Nagar">Shastri Nagar</option>
+                                            <option value="Rohini">Rohini</option>
+											<option value="Model Town">Model Town</option>
+                                          
+                                          
+                                          
+                                            <option value="Chandni Chowk">Chandni Chowk</option>
+											<option value="Yamuna Bank">Yamuna Bank</option>
+                                            <option value="Rajiv Chowk">Rajiv Chowk</option>
+                                            <option value="Karol Bagh">Karol Bagh</option>
+											<option value="Pitampura">Pitampura</option>
+                                            <option value="Jahangirpuri">Jahangirpuri</option>
+                                            <option value="Chawri Bazar">Chawri Bazar</option>
+                                            <option value="Rajouri Garden">Rajouri Garden</option>
+                                            <option value="Moti Nagar">Moti Nagar</option>
+                                            <option value="Tilak Nagar">Tilak Nagar</option>
+
+                                           
+											
+											
+                                            </select>
+                                            <span class="select-arrow"></span>
+                                    </div>
+                                </div>
+
+                           <!--     <div class="col-md-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Metro to</span>
+                                        <select class="form-control" type="text" name="destination" placeholder="Metro Station" required>
+                                            <option value="Iffco Chowk">Iffco chowk</option>
+											<option value="Delhi Gate">Delhi Gate</option>
+											<option>Dhansa Bus Stand†</option>
+											<option>Adarsh Nagar</option>
+											<option>Badarpur Border</option>
+											<option>Arjan Garh</option>
+											<option>Ashram</option>
+											<option>Central Secretariat</option>
+											<option>Chandni Chowk</option>
+											<option>Chawri Bazar</option>
+											<option>Chhatarpur</option>
+											
+                                            </select>
+                                            <span class="select-arrow"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <span class="form-label">METRO TO </span>
+                                <select class="form-control" type="text" name="destination" placeholder="Metro Station" required>
+                                    <option>select</option>
+                                    <option value="Dilshad Garden">Dilshad Garden</option>
+                                    
+                                    <option value="Kashmere Gate">Kashmere Gate</option>
+                                    <option value="Shastri Nagar">Shastri Nagar</option>
+                                    <option value="Rohini">Rohini</option>
+                                    <option value="Model Town">Model Town</option>
+                                  
+                                  
+                                  
+                                    <option value="Chandni Chowk">Chandni Chowk</option>
+                                    <option value="Yamuna Bank">Yamuna Bank</option>
+                                    <option value="Rajiv Chowk">Rajiv Chowk</option>
+                                    <option value="Karol Bagh">Karol Bagh</option>
+                                    <option value="Pitampura">Pitampura</option>
+                                    <option value="Jahangirpuri">Jahangirpuri</option>
+                                    <option value="Chawri Bazar">Chawri Bazar</option>
+                                    <option value="Rajouri Garden">Rajouri Garden</option>
+                                    <option value="Moti Nagar">Moti Nagar</option>
+                                    <option value="Tilak Nagar">Tilak Nagar</option>
+
+                                   
+                                    
+                                    
+                                    </select>
+                                    <span class="select-arrow"></span>
+                            </div>
+                        </div>
+
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <span class="form-label">Date</span>
+                                        <input class="form-control" name="date" type="date"  id="resever-date">
+                                    </div>
+                                </div>
+                           
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <span class="form-label">number of passsenger</span>
+                                <select class="form-control" type="text" name="numberofpass" placeholder="pass" required>
+                                   
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    
+                                    
+                                    </select>
+                                    <span class="select-arrow"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <span class="form-label">number of children</span>
+                                <select class="form-control" type="text" name="numberofchildren" placeholder="pass" required>
+                                   
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    
+                                    
+                                    </select>
+                                    <span class="select-arrow"></span>
+                            </div>
+                        </div>
+
+                                    </div>
+                                
+                                <div>
+
+                                <div>
+                                <input type="submit" name="submit1" id="submit1"  value="Book Ticket">
+                                </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+    <script>
+       
+
+     let  popup = document.getElementById("popup");
+
+     function openPopup(){
+     
+        popup.classList.add("open-popup");
+     }
+
+     function closePopup(){
+         popup.classList.remove("open-popup");
+     }
+function validation(){
+
+        var firstName=document.getElementById("first-name").value;
+        if(firstName.length<4){
+            document.getElementById("first-name-span").innerHTML="Please Enter Valid Name";
+        }else{
+            document.getElementById("first-name-span").innerHTML="";
+        }
+     }
+
+    </script>
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="Good">
+            <div class="sec aboutus">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad incidunt obcaecati laboriosam modi ratione sed iusto pariatur laborum ipsum, mollitia, tenetur repellendus dignissimos voluptatibus, adipisci cum minima officiis rem corporis.</p>\
+                <ul class="sci">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quickLinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Help</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Info</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span>Opposite Civil Hospital <br>,Anand Vihar,<br> Delhi</span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-phone-square" aria-hidden="true"></i></span>
+                        <p><a href="tel:0164-598-6375">+0164-598-6375</a><br>
+                            <a href="tel:12-74-361-789">+012-74-361-789</a><br>
+                            <a href="tel:102-707-19990">+0102-707-19990</a><br></p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <p><a href="mailto:delhimetro123@gmail.com">delhimetro123@gmail.com</a><br>
+                            <a href="mailto:metroservice123@gmail.com">metroservice123@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="copyrightText">
+        <p>All Rights Reserved. Copyright © Delhi Metro Ltd.</p>
+    </div>
+
+</body>
+</html>
